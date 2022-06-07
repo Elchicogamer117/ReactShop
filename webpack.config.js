@@ -7,27 +7,28 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
+  mode: 'development',
   resolve: {
     extensions: ['.js', '.jsx'],
-    module: {
-      rules: [
-        {
-          text: / \.(js|jsx)$ /,
-          exclude: /node_modules/,
-          use: {
-            loader: 'babel-loader'
-          }
-        },
-        {
-          test: / \.html$ /,
-          use: [
-            {
-              loader: 'html-loader'
-            }
-          ]
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
         }
-      ]
-    }
+      },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader'
+          }
+        ]
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
