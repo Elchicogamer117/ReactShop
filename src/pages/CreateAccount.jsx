@@ -16,7 +16,7 @@ const CreateAccount = () => {
             <label htmlFor="password" className="label"> Password </label>
             <input type="password" id="password" placeholder="**********" className="input inputPwd" />
           </div>
-          <input type="submit" defaultValue="Create" className="primaryButton loginButton" />
+          <input type="submit" value="Create" className="primaryButton loginButton" />
         </form>
 
       </div>

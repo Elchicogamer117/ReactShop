@@ -16,7 +16,7 @@ const MyAccount = () => {
             <label htmlFor="password" className="label"> Password </label>
             <p className="value"> ********** </p>
           </div>
-          <input type="submit" defaultValue="Edit" className="secondaryButton loginButton" />
+          <input type="submit" value="Edit" className="secondaryButton loginButton" />
         </form>
 
       </div>

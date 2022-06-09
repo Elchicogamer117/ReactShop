@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Layout from '../containers/Layout'
 import Home from '../pages/Home'
 import Login from '../pages/Login'
 import RecoverPwd from '../pages/RecoverPwd'
@@ -17,20 +18,19 @@ const App = () => {
     <BrowserRouter>
       <Layout>
         <Routes>
-          <Route path = '/' element = { <Home/> } />
-          <Route path = '/login' element = { <Login/> } />
-          <Route path = '/recovery-pwd' element = { <RecoverPwd/> } />
+          <Route exact path = '/' element = { <Home /> } />
+          <Route exact path = '/login' element = { <Login/> } />
+          <Route exact path = '/recovery-pwd' element = { <RecoverPwd/> } />
           <Route path = '/send-email' element = { <SendEmail/> } />
           <Route path = '/new-password' element = { <NewPwd/> } />
           <Route path = '/account' element = { <MyAccount/> } />
           <Route path = '/singup' element = { <CreateAccount/> } />
-          <Route path = '/myorder' element = { <MyOrder/> } />
-          <Route path = '/myorders' element = { <MyOrders/> } />
+          <Route path = '/my-order' element = { <MyOrder/> } />
+          <Route path = '/my-orders' element = { <MyOrders/> } />
           <Route path = '*' element = { <NotFound/> } />
         </Routes>
       </Layout>
     </BrowserRouter>
-    
   )
 }
 
