@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/Header.scss'
+import '../styles/components/Header.scss'
 
 const Header = () => {
   return (
@@ -30,7 +30,7 @@ const Header = () => {
       </div>
       <div className="navbarRight">
         <ul>
-          <li className="navbarEmail">elchicogamer117@git.com
+          <li className="navbarEmail"> elchicogamer117@git.com
             <img src="./assets/icons/flechita.svg" alt />
           </li>
           <li className="navbarShoppingCard">
