@@ -11,8 +11,6 @@ const NotFound = () => {
         <img src={littleHalo} alt="errorImage" />
       </section>
     </div>
-
-
   )
 }
 
