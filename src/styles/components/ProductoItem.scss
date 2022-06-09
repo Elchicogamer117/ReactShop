@@ -35,9 +35,6 @@
   color: var(--light-pink);
 }
 @media (max-width: 640px) {
-  .cardsContainer {
-  grid-template-columns:repeat(auto-fill, 180px);
-  }
   .productItem {
     width: 180px;
   }
