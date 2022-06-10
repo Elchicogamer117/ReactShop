@@ -1,5 +1,6 @@
 import React from 'react'
-import '../styles/components/ProductInfo.scss'
+import btCart from '@icons/btAddToCart.svg'
+import '@styles/components/ProductInfo.scss'
 
 const ProductInfo = () => {
   return (
@@ -16,7 +17,7 @@ const ProductInfo = () => {
         <p> Bagpack </p>
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
         <button className="primaryButton AddToCartButton">
-          <img src="./assets/icons/btAddToCart.svg" alt="addToCart" /> Add to cart
+          <img src={btCart} alt="addToCart" /> Add to cart
         </button>
       </div>
     </div>

@@ -1,12 +1,12 @@
 import React from 'react'
-import logoComplete from '../../public/assets/logos/logoYardSaleComplete.svg'
-import '../styles/pages/NewPwd.scss'
+import logo from '@logos/yardSaleFull.svg'
+import '@styles/pages/NewPwd.scss'
 
 const NewPwd = () => {
   return (
     <div className="newPwd">
       <div className="newPwdContainer">
-        <img src={logoComplete} alt="logo" className="logo" /> 
+        <img src={logo} alt="logo" className="logo" /> 
         <h1 className="title"> Create a new password </h1>
         <p className="subtitle"> Enter a new password for your account</p>
 

@@ -1,26 +1,26 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Layout from '../containers/Layout'
-import Home from '../pages/Home'
-import Login from '../pages/Login'
-import RecoverPwd from '../pages/RecoverPwd'
-import SendEmail from '../pages/SendEmail'
-import NewPwd from '../pages/NewPwd'
-import MyAccount from '../pages/MyAccount'
-import CreateAccount from '../pages/CreateAccount'
-import MyOrder from '../pages/MyOrder'
-import MyOrders from '../pages/MyOrders'
-import NotFound from '../pages/NotFound'
-import '../styles/global.css'
+import Layout from '@containers/Layout'
+import Home from '@pages/Home'
+import Login from '@pages/Login'
+import RecoverPwd from '@pages/RecoverPwd'
+import SendEmail from '@pages/SendEmail'
+import NewPwd from '@pages/NewPwd'
+import MyAccount from '@pages/MyAccount'
+import CreateAccount from '@pages/CreateAccount'
+import MyOrder from '@pages/MyOrder'
+import MyOrders from '@pages/MyOrders'
+import NotFound from '@pages/NotFound'
+import '@styles/global.css'
 
 const App = () => {
   return (
     <BrowserRouter>
       <Layout>
         <Routes>
-          <Route exact path = '/' element = { <Home /> } />
-          <Route exact path = '/login' element = { <Login/> } />
-          <Route exact path = '/recovery-pwd' element = { <RecoverPwd/> } />
+          <Route path = '/' element = { <Home /> } />
+          <Route path = '/login' element = { <Login/> } />
+          <Route path = '/recovery-pwd' element = { <RecoverPwd/> } />
           <Route path = '/send-email' element = { <SendEmail/> } />
           <Route path = '/new-password' element = { <NewPwd/> } />
           <Route path = '/account' element = { <MyAccount/> } />

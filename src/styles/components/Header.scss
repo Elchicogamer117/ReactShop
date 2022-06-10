@@ -10,7 +10,7 @@ nav {
 .menu {
   display: none;
 }
-.logo {
+.logoNav {
   width: 100px;
 }
 .navbarLeft {
@@ -50,10 +50,10 @@ nav {
   transform: rotate(90deg);
   margin-left: 4px;
 }
-.navbarShoppingCard {
+.navbarShoppingCart {
   position: relative;
 }
-.navbarShoppingCard div{
+.navbarShoppingCart div{
   width: 18px;
   height: 18px;
   color: var(--light-pink);

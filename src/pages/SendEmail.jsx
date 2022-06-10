@@ -1,13 +1,13 @@
 import React from 'react'
-import logoComplete from '../../public/assets/logos/logoYardSaleComplete.svg'
-import email from '../../public/assets/icons/email.svg'
-import '../styles/pages/SendEmail.scss'
+import logo from '@logos/yardSaleFull.svg'
+import email from '@icons/email.svg'
+import '@styles/pages/SendEmail.scss'
 
 const SendEmail = () => {
   return (
     <div className="sendEmail">
       <div className="sendEmailContainer">
-        <img src={ logoComplete } alt="logo" className="logo" /> 
+        <img src={ logo } alt="logo" className="logo" /> 
         <h1 className="title"> Email has been sent! 📧 </h1>
         <p className="subtitle"> Please check your inbox for instructions on how to reset the paswword 😃</p>
 

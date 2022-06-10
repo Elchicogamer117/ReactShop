@@ -1,12 +1,13 @@
 import React from 'react'
-import ShoppingCartItem from '../components/ShoppingCartItem'
-import '../styles/containers/ShoppingCart.scss'
+import ShoppingCartItem from '@components/ShoppingCartItem'
+import arrow from '@icons/arrow.svg'
+import '@styles/containers/ShoppingCart.scss'
 
 const ShoppingCart = () => {
   return (
   <aside className="shoppingCart">
     <div className="titleContainer">
-      <img src="../../public/assets/icons/arrow.svg" alt="arrow" />
+      <img src={arrow} alt="arrow" />
       <p className="title"> Shooping cart </p>
     </div>
     <div class="myOrderContent">

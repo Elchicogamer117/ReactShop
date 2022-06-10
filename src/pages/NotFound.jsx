@@ -1,6 +1,6 @@
 import React from 'react'
-import littleHalo from '../../public/assets/images/NotFound.png'
-import '../styles/pages/NotFound.css'
+import littleHalo from '@images/notFound.png'
+import '@styles/pages/NotFound.css'
 
 const NotFound = () => {
   return (

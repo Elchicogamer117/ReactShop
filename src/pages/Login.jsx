@@ -1,12 +1,12 @@
 import React from 'react'
-import logoComplete from '../../public/assets/logos/logoYardSaleComplete.svg'
-import '../styles/pages/Login.scss'
+import logo from '@logos/yardSaleFull.svg'
+import '@styles/pages/Login.scss'
 
 const Login = () => {
   return (
     <div className="login">
       <div className="loginContainer">
-        <img src={logoComplete} alt="logo" className="logo" /> 
+        <img src={logo} alt="logo" className="logo" /> 
 
         <form action="/" className="form">
           <label htmlFor="email" className="label"> Email address </label>
