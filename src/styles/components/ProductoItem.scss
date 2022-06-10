@@ -2,6 +2,7 @@
 
 .productItem {
   width: 240px;
+  margin: 20px 10px 10px 10px ;
 }
 .productItem img{
   width: 240px;
@@ -21,6 +22,7 @@
 .productInfo figure img {
   width: 35px;
   height: 35px;
+  cursor: pointer;
 }
 .productInfo div p:nth-child(1) {
   font-weight: bold;
