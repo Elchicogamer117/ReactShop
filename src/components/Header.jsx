@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Menucomp from '../components/Menu'
 import logo from '@logos/yardSaleFull.svg'
 import menu from '@icons/menu.svg'
 import arrow from '@icons/arrow.svg'
@@ -6,9 +7,14 @@ import cart from '@icons/shoppingCart.svg'
 import '@styles/components/Header.scss'
 
 const Header = () => {
+  const [toggle, setToggle] = useState(false)
+
+  const handleToggle = () => {
+    setToggle(!toggle)
+  }
   return (
     <nav>
-      <img src={menu} alt="menu" className="menu" />
+      <img src={menu} alt="menu" className="menuNav" />
       <div className="navbarLeft">
         <img src={logo} alt="logo" className="logoNav" />
         <ul>
@@ -34,7 +40,8 @@ const Header = () => {
       </div>
       <div className="navbarRight">
         <ul>
-          <li className="navbarEmail"> elchicogamer117@git.com
+          <li onClick={handleToggle} className="navbarEmail"> 
+            elchicogamer117@git.com
             <img src={arrow} alt="arrow" />
           </li>
           <li className="navbarShoppingCart">
@@ -43,6 +50,7 @@ const Header = () => {
           </li>
         </ul>
       </div>
+      {toggle && <Menucomp />}
     </nav>
 
   )
