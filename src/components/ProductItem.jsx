@@ -2,19 +2,19 @@ import React, { useState } from 'react'
 import btCart from '@icons/btAddToCart.svg'
 import '@styles/components/ProductoItem.scss'
 
-const ProductoItem = () => {
+const ProductItem = ({product}) => {
   const [cart, setCart] = useState([])
 
   const handleClick = () => {
-    setCart('Goodbye world 🖖')
+    setCart([])
   }
   return (
     <div className="productItem">
-      <img src="https://images.pexels.com/photos/776092/pexels-photo-776092.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt />
+      <img src={product.images[0]} alt={product.category.name} />
       <div className="productInfo">
         <div>
-          <p> $120 </p>
-          <p> Nintendo control </p>
+          <p> ${product.price} </p>
+          <p> {product.title} </p>
         </div>
         <figure onClick={handleClick}>
           <img src={btCart} alt="addToCart" />
@@ -24,4 +24,4 @@ const ProductoItem = () => {
   )
 }
 
-export default ProductoItem
+export default ProductItem

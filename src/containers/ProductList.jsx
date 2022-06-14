@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductoItem from '@components/ProductoItem'
+import ProductItem from '@components/ProductItem'
 import useGetProducts from '../hooks/useGetProducts'
 import '@styles/containers/ProductList.scss'
 
@@ -10,12 +10,11 @@ const ProductList = () => {
   return (
     <section>
       <div className="productList">
-        {products.map(() => {
-        return <ProductoItem />
-        })}
+        {products.map(product => (
+        <ProductItem  product={product} key={product.id} />
+        ))}
       </div>
     </section>
-
   )
 }
 
