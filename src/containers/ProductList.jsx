@@ -10,9 +10,9 @@ const ProductList = () => {
   return (
     <section>
       <div className="productList">
-        {products.map(product => (
-        <ProductItem  product={product} key={product.id} />
-        ))}
+        {products.map(product => {
+        return <ProductItem  product={product} key={product.id} />
+        })}
       </div>
     </section>
   )
