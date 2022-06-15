@@ -48,7 +48,6 @@ const Header = () => {
             elchicogamer117@git.com
             <img src={arrow} alt="arrow" />
           </li>
-          {/*! If we don't want to use manage function, we have to use a anonymous function to avoid a infinite loop of re-renders */}
           <li onClick={() => setToggleShopCart(!toggleShopCart)} className="navbarShoppingCart"> 
             <img src={scart} alt="shoppingCart" />
             {cart.length > 0 ? <div> {cart.length > 9 ? '+9' : cart.length} </div> : null}
