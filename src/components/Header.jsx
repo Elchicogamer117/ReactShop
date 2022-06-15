@@ -1,14 +1,16 @@
 import React, { useContext, useState } from 'react'
-import Menucomp from '../components/Menu'
+import AppContext from '../context/AppContext'
+import Menu from '../components/Menu'
+import ShoppingCart from '../containers/ShoppingCart'
 import logo from '@logos/yardSaleFull.svg'
-import menu from '@icons/menu.svg'
+import menus from '@icons/menu.svg'
 import arrow from '@icons/arrow.svg'
 import scart from '@icons/shoppingCart.svg'
-import AppContext from '../context/AppContext'
 import '@styles/components/Header.scss'
 
 const Header = () => {
   const [toggle, setToggle] = useState(false)
+  const [toggleShopCart, setToggleShopCart] = useState(false)
   const { state: {cart} } = useContext(AppContext)
 
   const handleToggle = () => {
@@ -16,7 +18,7 @@ const Header = () => {
   }
   return (
     <nav>
-      <img src={menu} alt="menu" className="menuNav" />
+      <img src={menus} alt="menu" className="menuNav" />
       <div className="navbarLeft">
         <img src={logo} alt="logo" className="logoNav" />
         <ul>
@@ -46,13 +48,15 @@ const Header = () => {
             elchicogamer117@git.com
             <img src={arrow} alt="arrow" />
           </li>
-          <li className="navbarShoppingCart">
+          {/*! If we don't want to use manage function, we have to use a anonymous function to avoid a infinite loop of re-renders */}
+          <li onClick={() => setToggleShopCart(!toggleShopCart)} className="navbarShoppingCart"> 
             <img src={scart} alt="shoppingCart" />
             {cart.length > 0 ? <div> {cart.length > 9 ? '+9' : cart.length} </div> : null}
           </li>
         </ul>
       </div>
-      {toggle && <Menucomp />}
+      {toggle && <Menu />}
+      {toggleShopCart && <ShoppingCart />}
     </nav>
 
   )
