@@ -6,21 +6,20 @@ import '@styles/containers/ShoppingCart.scss'
 
 const ShoppingCart = () => {
   const { state } = useContext(AppContext)
+
   const sumTotal = () => {
-    // let total = 0
-    // state.cart.forEach(product => total += product.price)
-    // return total
-    return  state.cart.reduce((accu, currVal) => accu + currVal.price, 0)
+    return state.cart.reduce((accu, currVal) => accu + currVal.price, 0)
   }
+
   return (
   <aside className="shoppingCart">
     <div className="titleContainer">
       <img src={arrow} alt="arrow" />
       <p className="title"> Shooping cart </p>
     </div>
-    <div class="myOrderContent">
-      { state.cart.map(product => {
-        return <ShoppingCartItem product={product} id={`item-${product.id}`} />
+    <div className="myOrderContent">
+      { state.cart.map((product,index) => {
+        return <ShoppingCartItem product={product} key={index} indexValue={index} />
       }) }
       
       <div className="order">

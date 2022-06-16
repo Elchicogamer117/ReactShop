@@ -22,3 +22,6 @@ color: var(--light-pink);
 .shoopingCardItem p:nth-child(3) {
 font-weight: bold;
 }
+.shoopingCardItem p + img {
+  cursor: pointer;
+}

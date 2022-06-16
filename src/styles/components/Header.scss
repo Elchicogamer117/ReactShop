@@ -70,8 +70,11 @@ nav {
   justify-content: center;
   align-items: center;
 }
+.navbarShoppingCart img {
+  cursor: pointer;
+}
 @media (max-width: 640px) {
-  .menu {
+  .menuNav {
         display: block;
   }
   .navbarLeft ul {
