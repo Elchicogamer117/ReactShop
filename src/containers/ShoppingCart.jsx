@@ -6,6 +6,12 @@ import '@styles/containers/ShoppingCart.scss'
 
 const ShoppingCart = () => {
   const { state } = useContext(AppContext)
+  const sumTotal = () => {
+    // let total = 0
+    // state.cart.forEach(product => total += product.price)
+    // return total
+    return  state.cart.reduce((accu, currVal) => accu + currVal.price, 0)
+  }
   return (
   <aside className="shoppingCart">
     <div className="titleContainer">
@@ -21,7 +27,7 @@ const ShoppingCart = () => {
         <p>
           <span> Total </span>
         </p>
-        <p> $560  </p>
+        <p> ${sumTotal()}  </p>
       </div>
       <button className="primaryButton">
         Checkout
