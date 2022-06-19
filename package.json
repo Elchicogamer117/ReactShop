@@ -1,4 +1,5 @@
 {
+  "homepage": "https://elchicogamer117.github.io/ReactShop/",
   "name": "react_shop",
   "version": "1.0.0",
   "description": "React e-shop",
@@ -6,13 +7,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d dist"
   },
   "keywords": [
     "react",
     "javascript",
     "html",
-    "css"
+    "css",
+    "webpack",
+    "babel"
   ],
   "author": "Elchicogamer117 <cfloresm1604@alumno.ipn.mx>",
   "license": "MIT",
@@ -34,6 +39,7 @@
   },
   "devDependencies": {
     "css-loader": "^6.7.1",
+    "gh-pages": "^4.0.0",
     "mini-css-extract-plugin": "^2.6.0",
     "sass": "^1.52.2",
     "sass-loader": "^13.0.0",
