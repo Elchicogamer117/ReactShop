@@ -22,7 +22,11 @@
 .productInfo figure img {
   width: 35px;
   height: 35px;
+  color: var(--flag--green);
   cursor: pointer;
+}
+.productInfo figure img:hover {
+  filter: saturate(180%);
 }
 .productInfo div p:nth-child(1) {
   font-weight: bold;

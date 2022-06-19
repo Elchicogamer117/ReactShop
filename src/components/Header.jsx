@@ -55,7 +55,7 @@ const Header = () => {
         </ul>
       </div>
       {toggle && <Menu />}
-      {toggleShopCart && <ShoppingCart />}
+      {toggleShopCart && <ShoppingCart toggleShopCart={toggleShopCart} setToggleShopCart={setToggleShopCart} />}
     </nav>
 
   )

@@ -3,9 +3,12 @@
 nav {
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
   padding: 0 24px;
   place-items: center;
   border-bottom: 1px solid var(--light-pink);
+  background: var(--white);
 }
 .menuNav {
   display: none;
@@ -70,10 +73,10 @@ nav {
   justify-content: center;
   align-items: center;
 }
-.navbarShoppingCart img {
+.navbarShoppingCart {
   cursor: pointer;
 }
-@media (max-width: 640px) {
+@media (max-width: 850px) {
   .menuNav {
         display: block;
   }

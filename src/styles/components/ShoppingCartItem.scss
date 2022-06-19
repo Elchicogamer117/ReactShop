@@ -23,5 +23,6 @@ color: var(--light-pink);
 font-weight: bold;
 }
 .shoopingCardItem p + img {
+  margin-right: 8px;
   cursor: pointer;
 }
