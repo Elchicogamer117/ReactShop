@@ -1,6 +1,6 @@
 @use '../vars';
 
-.menu {
+.menuDesk {
   width: 100px;
   height: auto;
   border: 1px solid var(--light-pink);
@@ -12,27 +12,27 @@
   background: var(--white);
   z-index: 1;
 }
-.menu ul {
+.menuDesk ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.menu ul li{
+.menuDesk ul li{
   text-align:  end;
 }
-.menu ul li:not(:last-child){
+.menuDesk ul li:not(:last-child){
   font-weight: bold;
 }
-.menu ul li:last-child{
+.menuDesk ul li:last-child{
   padding-top: 20px;
   border-top:  1px solid var(--light-pink);
   color: var(--flag--green);
 }
-.menu ul li:last-child a {
+.menuDesk ul li:last-child a {
   color: var(--flag--green);
   font-size: var(--sm);
 }
-.menu ul li a {
+.menuDesk ul li a {
   color: var(--black);
   text-decoration: none;
   display: inline-block;

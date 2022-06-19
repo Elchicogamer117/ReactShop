@@ -1,9 +1,9 @@
 import React from 'react'
-import '@styles/components/Menu.scss'
+import '@styles/components/MenuDesk.scss'
 
-const Menu = () => {
+const MenuDesk = () => {
   return (
-      <div className="menu">
+      <div className="menuDesk">
         <ul>
           <li>
             <a href="/"> My order</a>
@@ -19,4 +19,4 @@ const Menu = () => {
   )
 }
 
-export default Menu
+export default MenuDesk

@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react'
-import AppContext from '../context/AppContext'
-import Menu from '../components/Menu'
-import ShoppingCart from '../containers/ShoppingCart'
+import AppContext from '@context/AppContext'
+import MenuDesk from './MenuDesk'
+import MenuMob from './MenuMob'
+import ShoppingCart from '@containers/ShoppingCart'
 import logo from '@logos/yardSaleFull.svg'
 import menus from '@icons/menu.svg'
 import arrow from '@icons/arrow.svg'
@@ -11,6 +12,7 @@ import '@styles/components/Header.scss'
 const Header = () => {
   const [toggle, setToggle] = useState(false)
   const [toggleShopCart, setToggleShopCart] = useState(false)
+  const [toogleMenu, setToogleMenu] = useState(false)
   const { state: {cart} } = useContext(AppContext)
 
   const handleToggle = () => {
@@ -18,7 +20,7 @@ const Header = () => {
   }
   return (
     <nav>
-      <img src={menus} alt="menu" className="menuNav" />
+      <img src={menus} alt="menu" className="menuNav" onClick={() => setToogleMenu(!toogleMenu)} />
       <div className="navbarLeft">
         <img src={logo} alt="logo" className="logoNav" />
         <ul>
@@ -54,10 +56,10 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      {toggle && <Menu />}
+      {toogleMenu && <MenuMob />}
+      {toggle && <MenuDesk />}
       {toggleShopCart && <ShoppingCart toggleShopCart={toggleShopCart} setToggleShopCart={setToggleShopCart} />}
     </nav>
-
   )
 }
 
