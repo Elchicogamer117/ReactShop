@@ -13,7 +13,9 @@ Among the main functionalities achieved to this point are:
 
 All this taking advantage of the main features of react(State, Context, Custom Hooks, etc.)
 Additionally, full integration with webpack and babel was achieved to ensure the project could run in any browser and was ready for deployment.
-Which you can see [by clicking here](https://elchicogamer117.github.io/ReactShop/)
+Which you can see below and [by clicking here](https://elchicogamer117.github.io/ReactShop/)
+
+![React](https://user-images.githubusercontent.com/89102805/174712298-700f7533-ac35-4016-88f0-f3b4679f5a17.gif)
 
 ## Foreseeable evolution 🔮
 
